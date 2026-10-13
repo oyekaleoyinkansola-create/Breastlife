@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7b163d">
+  <title>Breast Health Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="brand-mark" aria-hidden="true">♡</div>
+    <p class="eyebrow">KNOW YOUR BODY • SEEK CARE EARLY</p>
+    <h1>Breast Health Guide</h1>
+    <p class="hero-copy">A private, simple guide to noticing changes, learning what they may mean, and knowing when to seek medical care.</p>
+  </header>
+
+  <main>
+    <section class="notice" role="note" aria-label="Important medical information">
+      <strong>Important:</strong> This app cannot test for or diagnose breast cancer. There is currently no reliable at-home app or HIV-strip-like self-test that can confirm or rule out breast cancer. Only a qualified healthcare professional can assess symptoms and arrange tests when needed.
+    </section>
+
+    <section class="panel">
+      <h2>1. Check for changes</h2>
+      <p>Think about whether you have noticed any of these changes. This checklist is for awareness, not diagnosis.</p>
+      <form id="symptom-form">
+        <div class="checklist">
+          <label><input type="checkbox" name="symptom" value="new-lump"> A new lump or thickened area in the breast or armpit</label>
+          <label><input type="checkbox" name="symptom" value="shape"> A change in breast size, shape, or appearance</label>
+          <label><input type="checkbox" name="symptom" value="skin"> Skin dimpling, puckering, redness, or a sore that does not heal</label>
+          <label><input type="checkbox" name="symptom" value="nipple"> A newly inverted nipple or other new nipple change</label>
+          <label><input type="checkbox" name="symptom" value="discharge"> Nipple discharge that is unusual for you, especially bloody discharge</label>
+          <label><input type="checkbox" name="symptom" value="pain"> Persistent, unusual breast or armpit pain</label>
+          <label><input type="checkbox" name="symptom" value="none"> I have not noticed any of these changes</label>
+        </div>
+        <button type="submit" class="primary">Show guidance</button>
+        <button type="reset" class="secondary">Clear selections</button>
+      </form>
+      <div id="guidance" class="guidance" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Know what to do</h2>
+      <div class="steps">
+        <article><span>01</span><div><h3>Notice what is normal for you</h3><p>Become familiar with how your breasts normally look and feel. There is no single “correct” way for breasts to look.</p></div></article>
+        <article><span>02</span><div><h3>Do not wait for pain</h3><p>Breast cancer may not cause pain early on. A new or persistent change deserves medical attention, even if it does not hurt.</p></div></article>
+        <article><span>03</span><div><h3>Arrange a clinical assessment</h3><p>Contact a healthcare professional or breast clinic promptly for a new or concerning change. They can decide whether an examination, imaging, or biopsy is appropriate.</p></div></article>
+        <article><span>04</span><div><h3>Ask about screening</h3><p>Screening recommendations depend on your age, personal and family history, and local guidance. Ask a qualified clinician what is suitable for you.</p></div></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>3. Plan a check-in</h2>
+      <p>Use this optional reminder to plan when you will review breast-health information or contact a clinic. It is not a substitute for recommended screening.</p>
+      <label for="reminder-date">Reminder date</label>
+      <input id="reminder-date" type="date">
+      <label for="reminder-note">Reminder note (optional)</label>
+      <input id="reminder-note" type="text" maxlength="120" placeholder="e.g. Ask a clinician about a new change">
+      <button id="save-reminder" class="primary" type="button">Save reminder on this device</button>
+      <p id="reminder-status" class="small" aria-live="polite">Reminder details stay in this browser on this device. They are not sent to a clinic.</p>
+    </section>
+
+    <section class="panel resources">
+      <h2>Trusted information</h2>
+      <p>Learn more from established health organisations:</p>
+      <ul>
+        <li><a href="https://www.who.int/news-room/fact-sheets/detail/breast-cancer" target="_blank" rel="noopener noreferrer">World Health Organization — Breast cancer</a></li>
+        <li><a href="https://www.cancer.gov/types/breast/breast-changes" target="_blank" rel="noopener noreferrer">U.S. National Cancer Institute — Breast changes</a></li>
+      </ul>
+    </section>
+    <p class="footer-note">This educational tool does not collect or transmit health information and must not be used to decide that cancer is present or absent. If you have a new or concerning breast change, seek professional medical advice.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
